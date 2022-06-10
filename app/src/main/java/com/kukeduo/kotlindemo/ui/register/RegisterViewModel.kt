@@ -1,11 +1,8 @@
 package com.kukeduo.kotlindemo.ui.register
 
-import androidx.lifecycle.MutableLiveData
 import com.btpj.lib_base.ext.handleRequest
 import com.btpj.lib_base.ext.launch
 import com.btpj.lib_base.utils.LogUtil
-import com.btpj.lib_base.utils.ToastUtil
-import com.btpj.wanandroid.data.bean.User
 import com.kukeduo.kotlindemo.net.DataRepository
 import com.kukeduo.module_common.base.base.BaseViewModel
 

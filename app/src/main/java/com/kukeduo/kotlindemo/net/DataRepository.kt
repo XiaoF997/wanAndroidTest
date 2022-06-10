@@ -3,8 +3,9 @@ package com.kukeduo.kotlindemo.net
 import com.btpj.lib_base.data.bean.PageResponse
 import com.btpj.lib_base.http.BaseRepository
 import com.btpj.wanandroid.data.bean.Article
-import com.btpj.wanandroid.data.bean.User
+import com.kukeduo.kotlindemo.bean.User
 import com.kukeduo.kotlindemo.bean.BannerBean
+import com.kukeduo.kotlindemo.bean.ProjectTitle
 import com.kukeduo.module_common.base.bean.ApiResponse
 
 object DataRepository: BaseRepository(), wanAndroidApi {
@@ -40,5 +41,9 @@ object DataRepository: BaseRepository(), wanAndroidApi {
         pwdSure: String
     ): ApiResponse<Any?> {
         return apiCall { api.register(username, pwd, pwdSure) }
+    }
+
+    override suspend fun getProjectTitleList(): ApiResponse<List<ProjectTitle>> {
+        return apiCall { api.getProjectTitleList() }
     }
 }

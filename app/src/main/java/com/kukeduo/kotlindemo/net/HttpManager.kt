@@ -3,11 +3,12 @@ package com.kukeduo.kotlindemo.net
 import android.util.Log
 import com.btpj.lib_base.data.bean.PageResponse
 import com.btpj.wanandroid.data.bean.Article
-import com.btpj.wanandroid.data.bean.User
+import com.kukeduo.kotlindemo.bean.User
 import com.google.gson.Gson
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.kukeduo.kotlindemo.bean.BannerBean
 import com.kukeduo.kotlindemo.bean.IdiomsItem
+import com.kukeduo.kotlindemo.bean.ProjectTitle
 import com.kukeduo.module_common.base.bean.ApiResponse
 import okhttp3.*
 import okhttp3.Headers
@@ -201,4 +202,8 @@ interface wanAndroidApi {
         @Field("password") pwd: String,
         @Field("repassword") pwdSure: String
     ): ApiResponse<Any?>
+
+    /** 获取项目分类数据 */
+    @GET("project/tree/json")
+    suspend fun getProjectTitleList(): ApiResponse<List<ProjectTitle>>
 }

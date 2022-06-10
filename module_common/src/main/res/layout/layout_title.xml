@@ -5,7 +5,7 @@
         android:id="@+id/cl_titleBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/purple_500"
+        android:background="@color/_ffffff"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
@@ -64,7 +64,7 @@
             android:paddingStart="40dp"
             android:paddingEnd="28dp"
             android:singleLine="true"
-            android:textColor="@color/_ffffff"
+            android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

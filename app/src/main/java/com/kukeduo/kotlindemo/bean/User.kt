@@ -1,4 +1,6 @@
-package com.btpj.wanandroid.data.bean
+package com.kukeduo.kotlindemo.bean
+
+import android.os.Parcelable
 
 
 /**
@@ -6,6 +8,7 @@ package com.btpj.wanandroid.data.bean
  *
  * @author LTP 2019/6/17
  */
+
 data class User(
     val admin: Boolean = false,
     val chapterTops: List<String> = listOf(),
