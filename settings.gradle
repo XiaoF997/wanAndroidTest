@@ -1,0 +1,3 @@
+rootProject.name = "KotlinDemo"
+include ':app'
+include ':module_common'
