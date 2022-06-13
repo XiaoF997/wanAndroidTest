@@ -146,5 +146,11 @@ class HomeFragment : BaseVMBFragment<HomeViewModel, FragmentHomeBinding>() {
             mBinding.smartRefreshLayout.finishLoadMore()
     }
 
+    override fun requestError(msg: String?) {
+        super.requestError(msg)
+        mBinding.smartRefreshLayout.finishRefresh()
+        mBinding.smartRefreshLayout.finishLoadMore()
+
+    }
 
 }

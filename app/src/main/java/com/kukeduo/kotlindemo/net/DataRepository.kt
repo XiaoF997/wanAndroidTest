@@ -46,4 +46,19 @@ object DataRepository: BaseRepository(), wanAndroidApi {
     override suspend fun getProjectTitleList(): ApiResponse<List<ProjectTitle>> {
         return apiCall { api.getProjectTitleList() }
     }
+
+    override suspend fun getNewProjectPageList(
+        pageNo: Int,
+        pageSize: Int
+    ): ApiResponse<PageResponse<Article>> {
+        return apiCall { api.getNewProjectPageList(pageNo, pageSize) }
+    }
+
+    override suspend fun getProjectPageList(
+        pageNo: Int,
+        pageSize: Int,
+        categoryId: Int
+    ): ApiResponse<PageResponse<Article>> {
+        return apiCall { api.getProjectPageList(pageNo, pageSize, categoryId) }
+    }
 }

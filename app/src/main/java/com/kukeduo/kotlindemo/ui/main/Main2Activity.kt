@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.btpj.lib_base.utils.ToastUtil
+import com.kukeduo.module_common.base.utils.ToastUtil
 import com.kukeduo.kotlindemo.R
 import com.kukeduo.kotlindemo.databinding.ActivityMainBinding
 import com.kukeduo.kotlindemo.ext.clearLongClickToast

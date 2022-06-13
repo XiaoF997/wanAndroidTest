@@ -3,11 +3,10 @@ package com.kukeduo.kotlindemo.ui.register
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.res.ResourcesCompat
 import com.btpj.lib_base.ext.load
-import com.btpj.lib_base.utils.ToastUtil
+import com.kukeduo.module_common.base.utils.ToastUtil
 import com.kukeduo.kotlindemo.R
 import com.kukeduo.kotlindemo.databinding.ActivityRegisterBinding
 import com.kukeduo.module_common.base.base.BaseVMBActivity

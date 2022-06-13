@@ -28,40 +28,37 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/project_tablayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="11dp"
-                    android:paddingEnd="11dp">
+                    android:overScrollMode="never"
+                    app:tabIndicatorHeight="1dp"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabIndicatorGravity="bottom"
+                    app:tabMaxWidth="0dp"
+                    app:tabMode="scrollable"
+                    app:tabGravity="center"
+                    app:tabPaddingBottom="-1dp"
+                    app:tabPaddingEnd="5dp"
+                    app:tabPaddingStart="-1dp"
+                    app:tabPaddingTop="-1dp"
+                    app:tabBackground="@android:color/transparent"
+                    app:tabRippleColor="@android:color/transparent"/>
 
 
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="TextView"
-                        android:gravity="center"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                    android:id="@+id/project_refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/project_classrec"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_weight="1"
-                        app:layout_constraintStart_toEndOf="@+id/textView"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:id="@+id/project_recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
 
 
             </LinearLayout>

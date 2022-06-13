@@ -41,7 +41,7 @@ object HttpManager {
         .build()
 }
 
-class LogginInterceptor: Interceptor{
+class LogginInterceptor : Interceptor {
     //一行字符最大数量
     private val MAX_LENGTH = 1024
 
@@ -149,6 +149,7 @@ class LogginInterceptor: Interceptor{
             false // Truncated UTF-8 sequence.
         }
     }
+
     /**
      * 判断 Headers 是不是编码过的
      *
@@ -161,7 +162,6 @@ class LogginInterceptor: Interceptor{
     }
 
 }
-
 
 
 interface IdiomsApi {
@@ -206,4 +206,19 @@ interface wanAndroidApi {
     /** 获取项目分类数据 */
     @GET("project/tree/json")
     suspend fun getProjectTitleList(): ApiResponse<List<ProjectTitle>>
+
+    /** 获取最新项目列表分页数据 */
+    @GET("article/listproject/{pageNo}/json")
+    suspend fun getNewProjectPageList(
+        @Path("pageNo") pageNo: Int,
+        @Query("page_size") pageSize: Int
+    ): ApiResponse<PageResponse<Article>>
+
+    /** 获取项目列表分页数据 */
+    @GET("project/list/{pageNo}/json")
+    suspend fun getProjectPageList(
+        @Path("pageNo") pageNo: Int,
+        @Query("page_size") pageSize: Int,
+        @Query("cid") categoryId: Int
+    ): ApiResponse<PageResponse<Article>>
 }
